@@ -1,0 +1,54 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+	
+	<title>Dynamic Text Styling</title>
+	<style>
+	.styled-text {
+	font-size: 18px;
+	font-family: Arial, sans-serif;
+	border: solid #ccc;
+	min-height: 100px;
+	}
+	
+	button {
+	margin: 10px;
+	padding: 10px;
+	}
+	</style>
+	</head>
+	<body>
+	
+	<h1>Dynamic Text Styling</h1>
+	<p>Click and drag to select some text, and use the buttons to apply styles:</p>
+	
+	<!-- Text area where users can apply styles -->
+	<div contenteditable="true" class="styled-text" >
+	Enter text here. You can select any word or line and apply styles like bold, italic, and underline.
+	</div>
+	
+	<!-- Buttons for applying styles -->
+	<button onclick="applyBold()">Bold</button>
+	<button onclick="applyItalic()">Italic</button>
+	<button onclick="applyUnderline()">Underline</button>
+	
+	<script>
+	// Function to apply bold styling
+	function applyBold() {
+	document.execCommand('bold');
+	}
+	
+	// Function to apply italic styling
+	function applyItalic() {
+	document.execCommand('italic');
+	}
+	
+	// Function to apply underline styling
+	function applyUnderline() {
+	document.execCommand('underline');
+	}
+	</script>
+	
+	</body>
+	</html>
+	
